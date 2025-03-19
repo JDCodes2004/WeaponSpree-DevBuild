@@ -1383,12 +1383,20 @@ namespace Quantum {
       _ISignalSwitchWeaponSystems = BuildSignalsArray<ISignalSwitchWeapon>();
       _ComponentSignalsOnAdded = new ComponentReactiveCallbackInvoker[ComponentTypeId.Type.Length];
       _ComponentSignalsOnRemoved = new ComponentReactiveCallbackInvoker[ComponentTypeId.Type.Length];
+      BuildSignalsArrayOnComponentAdded<AIBlackboardComponent>();
+      BuildSignalsArrayOnComponentRemoved<AIBlackboardComponent>();
+      BuildSignalsArrayOnComponentAdded<BTAgent>();
+      BuildSignalsArrayOnComponentRemoved<BTAgent>();
+      BuildSignalsArrayOnComponentAdded<BotSDKGlobals>();
+      BuildSignalsArrayOnComponentRemoved<BotSDKGlobals>();
       BuildSignalsArrayOnComponentAdded<CharacterController2D>();
       BuildSignalsArrayOnComponentRemoved<CharacterController2D>();
       BuildSignalsArrayOnComponentAdded<CharacterController3D>();
       BuildSignalsArrayOnComponentRemoved<CharacterController3D>();
       BuildSignalsArrayOnComponentAdded<Quantum.Gameplay>();
       BuildSignalsArrayOnComponentRemoved<Quantum.Gameplay>();
+      BuildSignalsArrayOnComponentAdded<HFSMAgent>();
+      BuildSignalsArrayOnComponentRemoved<HFSMAgent>();
       BuildSignalsArrayOnComponentAdded<Quantum.Health>();
       BuildSignalsArrayOnComponentRemoved<Quantum.Health>();
       BuildSignalsArrayOnComponentAdded<Quantum.KCC>();
@@ -1435,6 +1443,8 @@ namespace Quantum {
       BuildSignalsArrayOnComponentRemoved<Transform2DVertical>();
       BuildSignalsArrayOnComponentAdded<Transform3D>();
       BuildSignalsArrayOnComponentRemoved<Transform3D>();
+      BuildSignalsArrayOnComponentAdded<UTAgent>();
+      BuildSignalsArrayOnComponentRemoved<UTAgent>();
       BuildSignalsArrayOnComponentAdded<View>();
       BuildSignalsArrayOnComponentRemoved<View>();
       BuildSignalsArrayOnComponentAdded<Quantum.Weapon>();
@@ -1513,8 +1523,10 @@ namespace Quantum {
       SerializeInput = Quantum.Input.Serialize;
     }
     static partial void RegisterSimulationTypesGen(TypeRegistry typeRegistry) {
+      typeRegistry.Register(typeof(AIBlackboardComponent), AIBlackboardComponent.SIZE);
       typeRegistry.Register(typeof(AssetGuid), AssetGuid.SIZE);
       typeRegistry.Register(typeof(AssetRef), AssetRef.SIZE);
+      typeRegistry.Register(typeof(BTAgent), BTAgent.SIZE);
       typeRegistry.Register(typeof(Quantum.BitSet1024), Quantum.BitSet1024.SIZE);
       typeRegistry.Register(typeof(Quantum.BitSet128), Quantum.BitSet128.SIZE);
       typeRegistry.Register(typeof(Quantum.BitSet2048), Quantum.BitSet2048.SIZE);
@@ -1522,6 +1534,7 @@ namespace Quantum {
       typeRegistry.Register(typeof(Quantum.BitSet4096), Quantum.BitSet4096.SIZE);
       typeRegistry.Register(typeof(Quantum.BitSet512), Quantum.BitSet512.SIZE);
       typeRegistry.Register(typeof(Quantum.BitSet6), Quantum.BitSet6.SIZE);
+      typeRegistry.Register(typeof(BotSDKGlobals), BotSDKGlobals.SIZE);
       typeRegistry.Register(typeof(Button), Button.SIZE);
       typeRegistry.Register(typeof(CallbackFlags), 4);
       typeRegistry.Register(typeof(CharacterController2D), CharacterController2D.SIZE);
@@ -1549,6 +1562,8 @@ namespace Quantum {
       typeRegistry.Register(typeof(FrameMetaData), FrameMetaData.SIZE);
       typeRegistry.Register(typeof(FrameTimer), FrameTimer.SIZE);
       typeRegistry.Register(typeof(Quantum.Gameplay), Quantum.Gameplay.SIZE);
+      typeRegistry.Register(typeof(HFSMAgent), HFSMAgent.SIZE);
+      typeRegistry.Register(typeof(HFSMData), HFSMData.SIZE);
       typeRegistry.Register(typeof(Quantum.Health), Quantum.Health.SIZE);
       typeRegistry.Register(typeof(Quantum.HealthPickup), Quantum.HealthPickup.SIZE);
       typeRegistry.Register(typeof(HingeJoint), HingeJoint.SIZE);
@@ -1607,6 +1622,7 @@ namespace Quantum {
       typeRegistry.Register(typeof(Transform2D), Transform2D.SIZE);
       typeRegistry.Register(typeof(Transform2DVertical), Transform2DVertical.SIZE);
       typeRegistry.Register(typeof(Transform3D), Transform3D.SIZE);
+      typeRegistry.Register(typeof(UTAgent), UTAgent.SIZE);
       typeRegistry.Register(typeof(View), View.SIZE);
       typeRegistry.Register(typeof(Quantum.Weapon), Quantum.Weapon.SIZE);
       typeRegistry.Register(typeof(Quantum.WeaponPickup), Quantum.WeaponPickup.SIZE);
@@ -1614,9 +1630,13 @@ namespace Quantum {
       typeRegistry.Register(typeof(Quantum._globals_), Quantum._globals_.SIZE);
     }
     static partial void InitComponentTypeIdGen() {
-      ComponentTypeId.Reset(ComponentTypeId.BuiltInComponentCount + 10)
+      ComponentTypeId.Reset(ComponentTypeId.BuiltInComponentCount + 15)
         .AddBuiltInComponents()
+        .Add<AIBlackboardComponent>(AIBlackboardComponent.Serialize, AIBlackboardComponent.OnAdded, AIBlackboardComponent.OnRemoved, ComponentFlags.None)
+        .Add<BTAgent>(BTAgent.Serialize, BTAgent.OnAdded, BTAgent.OnRemoved, ComponentFlags.None)
+        .Add<BotSDKGlobals>(BotSDKGlobals.Serialize, BotSDKGlobals.OnAdded, BotSDKGlobals.OnRemoved, ComponentFlags.Singleton)
         .Add<Quantum.Gameplay>(Quantum.Gameplay.Serialize, Quantum.Gameplay.OnAdded, Quantum.Gameplay.OnRemoved, ComponentFlags.Singleton)
+        .Add<HFSMAgent>(HFSMAgent.Serialize, HFSMAgent.OnAdded, HFSMAgent.OnRemoved, ComponentFlags.None)
         .Add<Quantum.Health>(Quantum.Health.Serialize, null, null, ComponentFlags.None)
         .Add<Quantum.KCC>(Quantum.KCC.Serialize, null, Quantum.KCC.OnRemoved, ComponentFlags.None)
         .Add<Quantum.KCCProcessorLink>(Quantum.KCCProcessorLink.Serialize, null, null, ComponentFlags.None)
@@ -1624,6 +1644,7 @@ namespace Quantum {
         .Add<Quantum.LagCompensationTarget>(Quantum.LagCompensationTarget.Serialize, null, null, ComponentFlags.None)
         .Add<Quantum.Pickup>(Quantum.Pickup.Serialize, null, null, ComponentFlags.None)
         .Add<Quantum.Player>(Quantum.Player.Serialize, null, null, ComponentFlags.None)
+        .Add<UTAgent>(UTAgent.Serialize, UTAgent.OnAdded, UTAgent.OnRemoved, ComponentFlags.None)
         .Add<Quantum.Weapon>(Quantum.Weapon.Serialize, null, null, ComponentFlags.None)
         .Add<Quantum.Weapons>(Quantum.Weapons.Serialize, null, null, ComponentFlags.None)
         .Finish();
