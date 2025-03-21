@@ -5050,7 +5050,7 @@ GameObject:
   m_Layer: 10
   m_Name: Player-Bean
   m_TagString: Player
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -5962,7 +5962,6 @@ GameObject:
   - component: {fileID: 2652931519396299633}
   - component: {fileID: 8259443425623701011}
   - component: {fileID: 8259443425604988188}
-  - component: {fileID: 276670100421017669}
   - component: {fileID: 5239432526086315456}
   - component: {fileID: 8847512106860194168}
   - component: {fileID: 2133056950941876383}
@@ -6169,19 +6168,6 @@ MonoBehaviour:
   dampTimeLocomotion: 0.1
   dampTimeAiming: 0.3
   characterAnimator: {fileID: 6668511815244599374}
---- !u!114 &276670100421017669
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6103201107633194677}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2bd74ba84b94cd4bbb9b189a5e89fba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canvasPrefab: {fileID: 3706498445001124839}
 --- !u!114 &5239432526086315456
 MonoBehaviour:
   m_ObjectHideFlags: 0

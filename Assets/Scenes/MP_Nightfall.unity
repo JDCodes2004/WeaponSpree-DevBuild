@@ -23,7 +23,7 @@ RenderSettings:
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
-  m_AmbientIntensity: 2.08
+  m_AmbientIntensity: 1.57
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.31132078, g: 0.31132078, b: 0.31132078, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: c494c335823f54b52b2e87e1b7a63a23, type: 2}
@@ -35,10 +35,10 @@ RenderSettings:
   m_DefaultReflectionMode: 0
   m_DefaultReflectionResolution: 256
   m_ReflectionBounces: 2
-  m_ReflectionIntensity: 0.512
+  m_ReflectionIntensity: 0.39
   m_CustomReflection: {fileID: 0}
-  m_Sun: {fileID: 456088780}
-  m_IndirectSpecularColor: {r: 0.056821257, g: 0.07605105, b: 0.10275332, a: 0.512}
+  m_Sun: {fileID: 0}
+  m_IndirectSpecularColor: {r: 0.044832543, g: 0.062000647, b: 0.08584008, a: 0.39}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -954,6 +954,7 @@ Transform:
   - {fileID: 1989027742}
   - {fileID: 765996686}
   - {fileID: 704931353}
+  - {fileID: 1457563335}
   m_Father: {fileID: 38737868}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &365631628
@@ -1210,7 +1211,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 0.3
+  m_Intensity: 0.18
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -1252,7 +1253,7 @@ Light:
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
+  m_BounceIntensity: 0.09
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
@@ -3029,7 +3030,6 @@ Transform:
   - {fileID: 1622210464}
   - {fileID: 1513042496}
   - {fileID: 1274366571}
-  - {fileID: 1457563335}
   m_Father: {fileID: 38737868}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1355199638
@@ -3150,7 +3150,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1353200938}
+    m_TransformParent: {fileID: 239966014}
     m_Modifications:
     - target: {fileID: 100000, guid: 5dca1204e7e935d408728950a2ad997e, type: 3}
       propertyPath: m_Name
@@ -3166,19 +3166,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5dca1204e7e935d408728950a2ad997e, type: 3}
       propertyPath: m_LocalScale.z
-      value: 4.329416
+      value: 3.3414001
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5dca1204e7e935d408728950a2ad997e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -140.28413
+      value: -167.00574
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5dca1204e7e935d408728950a2ad997e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -125.93872
+      value: -17.968933
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5dca1204e7e935d408728950a2ad997e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 93.93237
+      value: -9.656006
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5dca1204e7e935d408728950a2ad997e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3682,7 +3682,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0667c9fc437efb4cac30165f9c3b421, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 2751027687307977091, guid: a865f9292b0a5cc44b329ebb12777353, type: 3}
+  player: {fileID: 5151583980886054133, guid: 3ab3106a3dd9c1e4e86d9c1c910a24c0, type: 3}
   SpawnPoint: {fileID: 1754539514}
   roomCamera: {fileID: 1200855729}
 --- !u!4 &1641416821
