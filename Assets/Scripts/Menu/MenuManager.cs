@@ -1,0 +1,111 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class MenuManager : MonoBehaviour
+{
+    public GameObject MenuGameObject;
+    public GameObject SpecialThanksGameObject;
+    public GameObject MultiplayerMenuGameObject;
+    public GameObject TitleCamera;
+    public GameObject TestLevelSelectMenuGameObject;
+    public GameObject WelcomeMessageGameObject;
+    public GameObject MultiplayerWIPErrorGameObject;
+    public AudioSource PlaceholderMenuConfirm;
+    public AudioSource PlaceholderMenuBack;
+    public GameObject OptionsMenuGameObject;
+    // Option menu
+    public void GoToOptionsMenu()
+    {
+        MenuGameObject.SetActive(false);
+        TitleCamera.SetActive(true);
+        SpecialThanksGameObject.SetActive(false);
+        WelcomeMessageGameObject.SetActive(false);
+        PlaceholderMenuConfirm.Play();
+        OptionsMenuGameObject.SetActive(true);
+        MultiplayerWIPErrorGameObject.SetActive(false);
+    }
+
+    //Back to Main Menu
+    public void GoToMenu()
+    {
+        MenuGameObject.SetActive(true);
+        TitleCamera.SetActive(true);
+        SpecialThanksGameObject.SetActive(false);
+        WelcomeMessageGameObject.SetActive(false);
+        PlaceholderMenuConfirm.Play();
+        OptionsMenuGameObject.SetActive(false);
+        TestLevelSelectMenuGameObject.SetActive(false);
+        MultiplayerWIPErrorGameObject.SetActive(false);
+    }
+
+    // Test Level select screen
+    public void TestLevelSelect()
+    {
+        MenuGameObject.SetActive(false);
+        TitleCamera.SetActive(true);
+        SpecialThanksGameObject.SetActive(false);
+        WelcomeMessageGameObject.SetActive(false);
+        PlaceholderMenuBack.Play();
+        OptionsMenuGameObject.SetActive(false);
+        TestLevelSelectMenuGameObject.SetActive(true);
+        MultiplayerWIPErrorGameObject.SetActive(false);
+    }
+
+
+
+    // Go To Welcome Message
+    public void GoToWelcomeMessage()
+    {
+        MenuGameObject.SetActive(false);
+        TitleCamera.SetActive(true);
+        SpecialThanksGameObject.SetActive(false);
+        WelcomeMessageGameObject.SetActive(true);
+        PlaceholderMenuBack.Play();
+        OptionsMenuGameObject.SetActive(false);
+        TestLevelSelectMenuGameObject.SetActive(false);
+        MultiplayerWIPErrorGameObject.SetActive(false);
+    }
+
+
+    // Special Thanks screen
+    public void GoToSpecThanks()
+    {
+        MenuGameObject.SetActive(false);
+        SpecialThanksGameObject.SetActive(true);
+        TitleCamera.SetActive(true);
+        WelcomeMessageGameObject.SetActive(false);
+        PlaceholderMenuBack.Play();
+        OptionsMenuGameObject.SetActive(false);
+        TestLevelSelectMenuGameObject.SetActive(false);
+        MultiplayerWIPErrorGameObject.SetActive(false);
+    }
+
+    // Quit Game
+    public void QuitToDesktop()
+    {
+        Debug.Log("Quitting to Desktop...");
+        Application.Quit();
+    }
+
+    // Developer Commentary level Load
+    public void LoadDevCommentaryLevel()
+    {
+
+    }
+
+    //Temp error while Multiplayer is being worked on
+    public void MultiplayerWIPError()
+    {
+        MultiplayerWIPErrorGameObject.SetActive(true);
+        MenuGameObject.SetActive(true);
+        TitleCamera.SetActive(true);
+        SpecialThanksGameObject.SetActive(false);
+        WelcomeMessageGameObject.SetActive(false);
+        PlaceholderMenuBack.Play();
+        OptionsMenuGameObject.SetActive(false);
+        TestLevelSelectMenuGameObject.SetActive(false);
+
+    }
+
+}
