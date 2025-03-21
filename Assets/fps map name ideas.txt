@@ -1,6 +1,0 @@
-Planned Map names:
-Hat Trick (a football stadium and pitch): Perfect for TDM and CTF
-Remote (A facility in the remote desert): Perfect for CTF (big teams like 6v6 or 8v8)
-Danger Close (A close quarters map): perfect for small team FFA, TDM
-Warehouse (A Robot factory/Warehouse): perfect for small team FFA, TDM, and other small team games
-Nightfall (A surburban cityscape map): perfect for small team FFA, TDM, and possibly big teams (7v7, 8v8, etc)

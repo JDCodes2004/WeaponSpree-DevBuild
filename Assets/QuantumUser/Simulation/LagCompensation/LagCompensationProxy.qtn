@@ -1,5 +1,0 @@
-﻿component LagCompensationProxy
-{
-    [ExcludeFromPrototype]
-    EntityRef Target;
-}

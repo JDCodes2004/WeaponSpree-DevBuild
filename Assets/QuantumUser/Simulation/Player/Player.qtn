@@ -1,9 +1,0 @@
-component Player
-{
-	FP MoveSpeed;
-	FP JumpForce;
-	FP CameraOffset;
-
-    [HideInInspector]
-    PlayerRef PlayerRef;
-}

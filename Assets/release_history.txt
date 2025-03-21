@@ -1,4 +1,0 @@
-Photon Quantum Simple FPS - Release History
-
-Version 3.0.0
-- Initial release.

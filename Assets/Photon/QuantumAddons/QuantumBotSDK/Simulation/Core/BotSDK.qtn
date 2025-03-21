@@ -1,9 +1,0 @@
-﻿[CodeGen(HasUnityAdapter)]
-import component AIBlackboardComponent(16);
-import component BTAgent(56);
-import component HFSMAgent(104);
-import component UTAgent(56);
-
-import singleton component BotSDKGlobals(32);
-
-import struct HFSMData(96);
