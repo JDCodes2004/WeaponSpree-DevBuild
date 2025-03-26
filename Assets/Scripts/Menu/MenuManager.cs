@@ -10,7 +10,6 @@ public class MenuManager : MonoBehaviour
     public GameObject TitleCamera;
     public GameObject TestLevelSelectMenuGameObject;
     public GameObject WelcomeMessageGameObject;
-    public GameObject MultiplayerWIPErrorGameObject;
     public AudioSource PlaceholderMenuConfirm;
     public AudioSource PlaceholderMenuBack;
     public GameObject OptionsMenuGameObject;
@@ -23,7 +22,6 @@ public class MenuManager : MonoBehaviour
         WelcomeMessageGameObject.SetActive(false);
         PlaceholderMenuConfirm.Play();
         OptionsMenuGameObject.SetActive(true);
-        MultiplayerWIPErrorGameObject.SetActive(false);
     }
 
     //Back to Main Menu
@@ -33,10 +31,9 @@ public class MenuManager : MonoBehaviour
         TitleCamera.SetActive(true);
         SpecialThanksGameObject.SetActive(false);
         WelcomeMessageGameObject.SetActive(false);
-        PlaceholderMenuConfirm.Play();
+        PlaceholderMenuBack.Play();
         OptionsMenuGameObject.SetActive(false);
         TestLevelSelectMenuGameObject.SetActive(false);
-        MultiplayerWIPErrorGameObject.SetActive(false);
     }
 
     // Test Level select screen
@@ -49,7 +46,6 @@ public class MenuManager : MonoBehaviour
         PlaceholderMenuBack.Play();
         OptionsMenuGameObject.SetActive(false);
         TestLevelSelectMenuGameObject.SetActive(true);
-        MultiplayerWIPErrorGameObject.SetActive(false);
     }
 
 
@@ -64,7 +60,6 @@ public class MenuManager : MonoBehaviour
         PlaceholderMenuBack.Play();
         OptionsMenuGameObject.SetActive(false);
         TestLevelSelectMenuGameObject.SetActive(false);
-        MultiplayerWIPErrorGameObject.SetActive(false);
     }
 
 
@@ -78,7 +73,6 @@ public class MenuManager : MonoBehaviour
         PlaceholderMenuBack.Play();
         OptionsMenuGameObject.SetActive(false);
         TestLevelSelectMenuGameObject.SetActive(false);
-        MultiplayerWIPErrorGameObject.SetActive(false);
     }
 
     // Quit Game
@@ -93,19 +87,4 @@ public class MenuManager : MonoBehaviour
     {
 
     }
-
-    //Temp error while Multiplayer is being worked on
-    public void MultiplayerWIPError()
-    {
-        MultiplayerWIPErrorGameObject.SetActive(true);
-        MenuGameObject.SetActive(true);
-        TitleCamera.SetActive(true);
-        SpecialThanksGameObject.SetActive(false);
-        WelcomeMessageGameObject.SetActive(false);
-        PlaceholderMenuBack.Play();
-        OptionsMenuGameObject.SetActive(false);
-        TestLevelSelectMenuGameObject.SetActive(false);
-
-    }
-
 }
