@@ -19,14 +19,12 @@ public class EasterEggCue : MonoBehaviourPunCallbacks
         EasterEggCuePlaying = false;    
     }
 
+   
     // Update is called once per frame
     void Update()
     {
-        void OnTriggerEnter(Collider other)
-        {
-            EasterEggCuePlaying = true;
-        }
-        
+
+
         if (EasterEggCuePlaying == true)
         {
             EasterEggCueAudioSource.Play();
@@ -40,8 +38,9 @@ public class EasterEggCue : MonoBehaviourPunCallbacks
 
 
     }
-
-        
-   
+ private void OnTriggerEnter(Collider other)
+    {
+            EasterEggCuePlaying = true;
+    }
 }
 

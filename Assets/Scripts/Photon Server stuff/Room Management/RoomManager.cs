@@ -7,7 +7,7 @@ public class RoomManager : MonoBehaviourPunCallbacks
 {
     public static RoomManager instance;
 
-    public GameObject player;
+    public GameObject playerPrefab;
     [Space]
     public Transform SpawnPoint;
     [Space]
@@ -54,8 +54,8 @@ public class RoomManager : MonoBehaviourPunCallbacks
 
     public void SpawnPlayer()
     {
-        GameObject _player = PhotonNetwork.Instantiate(player.name, SpawnPoint.position, Quaternion.identity);
-        _player.GetComponent<PlayerSetup>().IsLocalPlayer();
-        _player.GetComponent<Health>().isLocalPlayer = true;
+        GameObject _playerPrefab = PhotonNetwork.Instantiate(playerPrefab.name, SpawnPoint.position, Quaternion.identity);
+        _playerPrefab.GetComponent<PlayerSetup>().IsLocalPlayer();
+        _playerPrefab.GetComponent<Health>().isLocalPlayer = true;
     }
 }

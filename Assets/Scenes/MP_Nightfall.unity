@@ -1763,6 +1763,12 @@ PrefabInstance:
       propertyPath: roomCamera
       value: 
       objectReference: {fileID: 1971924602}
+    - target: {fileID: 5905579695915859636, guid: 4ec588b074e4cf744924f0b98f4fe9f0,
+        type: 3}
+      propertyPath: playerPrefab
+      value: 
+      objectReference: {fileID: 5151583980886054133, guid: 3ab3106a3dd9c1e4e86d9c1c910a24c0,
+        type: 3}
     - target: {fileID: 6652574436157323538, guid: 4ec588b074e4cf744924f0b98f4fe9f0,
         type: 3}
       propertyPath: m_Name
@@ -4475,7 +4481,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2103550966
 Transform:
   m_ObjectHideFlags: 0
@@ -4502,7 +4508,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: d27a60636fe26eb4d9610167c9193928, type: 3}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
