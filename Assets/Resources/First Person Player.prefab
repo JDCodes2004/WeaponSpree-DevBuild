@@ -6164,7 +6164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventory: {fileID: 226546973901218415}
-  cameraWorld: {fileID: 9091026493716219392}
+  cameraWorld: {fileID: 0}
   dampTimeLocomotion: 0.1
   dampTimeAiming: 0.3
   characterAnimator: {fileID: 6668511815244599374}
