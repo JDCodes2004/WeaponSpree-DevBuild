@@ -8,7 +8,7 @@ using Unity.VisualScripting;
 public class EasterEggCue : MonoBehaviourPunCallbacks
 {
     public GameObject EasterEggCueTrigger;
-    public AudioSource EasterEggCueAudioSource;
+    public GameObject EasterEggCueAudioSource;
 
     public bool EasterEggCuePlaying;
 
@@ -19,7 +19,16 @@ public class EasterEggCue : MonoBehaviourPunCallbacks
         EasterEggCuePlaying = false;    
     }
 
-   
+    private void OnTriggerEnter(Collider other)
+    {
+        EasterEggCuePlaying = true;
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        EasterEggCuePlaying = false;
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -27,20 +36,18 @@ public class EasterEggCue : MonoBehaviourPunCallbacks
 
         if (EasterEggCuePlaying == true)
         {
-            EasterEggCueAudioSource.Play();
+            EasterEggCueAudioSource.SetActive(true);
         }
         else
         {
             EasterEggCuePlaying = false;
+            EasterEggCueAudioSource.SetActive(false);
         }
-
-
-
-
     }
- private void OnTriggerEnter(Collider other)
-    {
-            EasterEggCuePlaying = true;
-    }
+    // Dev note to self: Am I seriously taking
+    // too much inspiration from Halo?
+    // I mean, I added the "Siege of Madrigal"
+    // easter egg from the games.
+    
 }
 

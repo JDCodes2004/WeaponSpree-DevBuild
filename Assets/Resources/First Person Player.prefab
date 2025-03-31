@@ -2681,8 +2681,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Low Poly Shooter Pack - Free Sample v 2.0
-
+  m_text: 'Weapons Spree Dev build (Game available: TBD)
 
 '
   m_isRightToLeft: 0
@@ -6467,7 +6466,7 @@ MonoBehaviour:
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
-  m_Camera: {fileID: 9091026493716219392}
+  m_Camera: {fileID: 0}
 --- !u!114 &2133056950941876383
 MonoBehaviour:
   m_ObjectHideFlags: 0
