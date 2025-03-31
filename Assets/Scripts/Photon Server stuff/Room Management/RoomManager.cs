@@ -9,15 +9,18 @@ public class RoomManager : MonoBehaviourPunCallbacks
 
     public GameObject playerPrefab;
     [Space]
-    public Transform SpawnPoint;
+    public Transform spawnPoint;
     [Space]
     public GameObject roomCamera;
+
+    private string nickname = "unnamed";
 
     private void Awake()
     {
         instance = this;
     }
 
+    public void ChangeNickname(string _)
     // Start is called before the first frame update
     void Start()
     {
@@ -54,7 +57,7 @@ public class RoomManager : MonoBehaviourPunCallbacks
 
     public void SpawnPlayer()
     {
-        GameObject _playerPrefab = PhotonNetwork.Instantiate(playerPrefab.name, SpawnPoint.position, Quaternion.identity);
+        GameObject _playerPrefab = PhotonNetwork.Instantiate(playerPrefab.name, spawnPoint.position, Quaternion.identity);
         _playerPrefab.GetComponent<PlayerSetup>().IsLocalPlayer();
         _playerPrefab.GetComponent<Health>().isLocalPlayer = true;
     }
