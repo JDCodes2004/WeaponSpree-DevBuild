@@ -16,7 +16,6 @@ TagManager:
   - Wood (Static)
   - Dirt (Static)
   - Wood
-  - Geom
   layers:
   - Default
   - TransparentFX
