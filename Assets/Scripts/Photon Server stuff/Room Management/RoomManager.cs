@@ -9,15 +9,35 @@ public class RoomManager : MonoBehaviourPunCallbacks
 
     public GameObject playerPrefab;
     [Space]
-    public Transform SpawnPoint;
+    public Transform spawnPoint;
     [Space]
     public GameObject roomCamera;
+
+
+    public GameObject nameUI;
+
+    public GameObject connectingUI;
+
+    private string nickname = "unnamed player";
+
+
+    public string roomNameToJoin = "test";
 
     private void Awake()
     {
         instance = this;
     }
 
+
+    public void JoinRoomButtonPressed()
+    {
+        Debug.Log("Connecting.. Please wait :)");
+
+        PhotonNetwork.ConnectUsingSettings();
+
+        nameUI.SetActive(false);
+        connectingUI.SetActive(true);
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -39,7 +59,7 @@ public class RoomManager : MonoBehaviourPunCallbacks
     {
         base.OnJoinedLobby();
 
-        PhotonNetwork.JoinOrCreateRoom(roomName: "Dev-Test", roomOptions: null, typedLobby: null);
+        PhotonNetwork.JoinOrCreateRoom(roomNameToJoin, roomOptions: null, typedLobby: null);
 
         Debug.Log(message: "We're connected and in a room now");
     }
@@ -54,7 +74,7 @@ public class RoomManager : MonoBehaviourPunCallbacks
 
     public void SpawnPlayer()
     {
-        GameObject _playerPrefab = PhotonNetwork.Instantiate(playerPrefab.name, SpawnPoint.position, Quaternion.identity);
+        GameObject _playerPrefab = PhotonNetwork.Instantiate(playerPrefab.name, spawnPoint.position, Quaternion.identity);
         _playerPrefab.GetComponent<PlayerSetup>().IsLocalPlayer();
         _playerPrefab.GetComponent<Health>().isLocalPlayer = true;
     }

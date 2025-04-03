@@ -7,11 +7,19 @@ using TMPro;
 
 public class RoomList : MonoBehaviourPunCallbacks
 {
+    public static RoomList Instance;
+    
+    
     [Header("UI")] public Transform roomListParent;
     public GameObject roomListItemPrefab;
 
 
     private List<RoomInfo> cachedRoomList = new List<RoomInfo>();
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     IEnumerator Start()
     {
