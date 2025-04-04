@@ -4166,6 +4166,7 @@ GameObject:
   - component: {fileID: 4984231947598345518}
   - component: {fileID: 6992175800629482457}
   - component: {fileID: 6703145043489327027}
+  - component: {fileID: 469551937031094656}
   m_Layer: 10
   m_Name: First Person Player
   m_TagString: Player
@@ -4182,7 +4183,7 @@ Transform:
   m_GameObject: {fileID: 5151583980886054133}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1218.1521, y: 611.83, z: -468.93448}
+  m_LocalPosition: {x: 1218.1521, y: 227, z: -468.93448}
   m_LocalScale: {x: 1.242025, y: 1.5, z: 1.4285713}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4314,6 +4315,21 @@ MonoBehaviour:
   health: 100
   isLocalPlayer: 1
   healthText: {fileID: 8344583076202532161}
+--- !u!114 &469551937031094656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5151583980886054133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e57f8e5f8e587314ba49e93f835e97ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 6103201107633194677}
+  Playercamera: {fileID: 8239609418843493538}
+  nickname: 
 --- !u!1 &5167023826375365760
 GameObject:
   m_ObjectHideFlags: 0
