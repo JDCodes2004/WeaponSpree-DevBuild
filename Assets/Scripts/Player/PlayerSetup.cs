@@ -18,8 +18,8 @@ public class PlayerSetup : MonoBehaviour
 
 
     [PunRPC]
-    public void SetNickname(string nickname)
+    public void SetNickname(string _name)
     {
-        nickname = nickname;
+        nickname = _name;
     }
 }

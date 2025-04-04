@@ -27,7 +27,10 @@ public class RoomManager : MonoBehaviourPunCallbacks
     {
         instance = this;
     }
-
+    public void ChangeNickname(string _name)
+    {
+        nickname = _name;
+    }
 
     public void JoinRoomButtonPressed()
     {
@@ -35,15 +38,13 @@ public class RoomManager : MonoBehaviourPunCallbacks
 
         PhotonNetwork.ConnectUsingSettings();
 
-        nameUI.SetActive(true);
+        nameUI.SetActive(false);
         connectingUI.SetActive(true);
     }
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log(message: "Connecting...");
 
-        PhotonNetwork.ConnectUsingSettings();
     }
 
     public override void OnConnectedToMaster()
