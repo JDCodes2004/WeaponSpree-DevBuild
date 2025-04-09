@@ -213,7 +213,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 1.02e-43, y: 3.1e-44, z: 4.82e-42, w: 0}
+  m_BoundingSphereOverride: {x: 5.28e-43, y: 7.0592475e-37, z: 5.28e-43, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -4224,6 +4224,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1095071640}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1116416119 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6375684864073374145, guid: ab0b9f448ee1c5747bca0c029bb26ffb,
+    type: 3}
+  m_PrefabInstance: {fileID: 1286467969401873260}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2da0c512f12947e489f739169773d7ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1131637923
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8876,9 +8888,20 @@ PrefabInstance:
       objectReference: {fileID: 54691257}
     - target: {fileID: 1448878592658033735, guid: ab0b9f448ee1c5747bca0c029bb26ffb,
         type: 3}
+      propertyPath: nameinput
+      value: 
+      objectReference: {fileID: 1116416119}
+    - target: {fileID: 1448878592658033735, guid: ab0b9f448ee1c5747bca0c029bb26ffb,
+        type: 3}
       propertyPath: spawnPoint
       value: 
       objectReference: {fileID: 1304471404}
+    - target: {fileID: 1448878592658033735, guid: ab0b9f448ee1c5747bca0c029bb26ffb,
+        type: 3}
+      propertyPath: playerPrefab
+      value: 
+      objectReference: {fileID: 9029036341063560558, guid: ceea8ecfeb8704f4c866bb050a564447,
+        type: 3}
     - target: {fileID: 1854664069712071649, guid: ab0b9f448ee1c5747bca0c029bb26ffb,
         type: 3}
       propertyPath: m_Name

@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
+using UnityEngine.EventSystems;
+using TMPro;
 
 public class RoomManager : MonoBehaviourPunCallbacks
 {
@@ -15,6 +17,9 @@ public class RoomManager : MonoBehaviourPunCallbacks
 
 
     public GameObject nameUI;
+
+    [SerializeField] private TMP_InputField nameinput;
+    [SerializeField] private int maxCharacters = 26;
 
     public GameObject connectingUI;
 
@@ -44,6 +49,10 @@ public class RoomManager : MonoBehaviourPunCallbacks
     // Start is called before the first frame update
     void Start()
     {
+        if (nameinput != null)
+        {
+            nameinput.characterLimit = maxCharacters;
+        }
 
     }
 
