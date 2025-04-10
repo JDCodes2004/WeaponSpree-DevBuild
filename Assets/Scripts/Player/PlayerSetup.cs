@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
+using TMPro;
 
 public class PlayerSetup : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class PlayerSetup : MonoBehaviour
     public GameObject Playercamera;
 
     public string nickname;
+
+    public TextMeshPro NicknameThirdPersonDisplay;
     public void IsLocalPlayer()
     {
         Player.SetActive(true);
@@ -21,5 +24,6 @@ public class PlayerSetup : MonoBehaviour
     public void SetNickname(string _name)
     {
         nickname = _name;
+        NicknameThirdPersonDisplay.text = nickname;
     }
 }
