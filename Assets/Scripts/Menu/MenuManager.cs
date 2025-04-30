@@ -62,6 +62,19 @@ public class MenuManager : MonoBehaviour
         TestLevelSelectMenuGameObject.SetActive(false);
     }
 
+    // Multiplayer
+    public void GoToMultiplayer()
+    {
+        MenuGameObject.SetActive(false);
+        MultiplayerMenuGameObject.SetActive(true);
+        SpecialThanksGameObject.SetActive(true);
+        TitleCamera.SetActive(true);
+        WelcomeMessageGameObject.SetActive(false);
+        PlaceholderMenuBack.Play();
+        OptionsMenuGameObject.SetActive(false);
+        TestLevelSelectMenuGameObject.SetActive(false);
+    }
+
 
     // Special Thanks screen
     public void GoToSpecThanks()

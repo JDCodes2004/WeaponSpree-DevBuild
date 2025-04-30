@@ -4,6 +4,7 @@ using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
 using TMPro;
+using UnityEngine.UI;
 
 public class RoomList : MonoBehaviourPunCallbacks
 {
@@ -15,6 +16,17 @@ public class RoomList : MonoBehaviourPunCallbacks
 
 
     private List<RoomInfo> cachedRoomList = new List<RoomInfo>();
+
+    public class MapData
+    {
+        public string MapName;
+        public int scene;
+
+        public TextMeshPro mapValue;
+
+        public MapData[] maps;
+        public int currentmap = 0;
+    }
 
     private void Awake()
     {
@@ -96,7 +108,7 @@ public class RoomList : MonoBehaviourPunCallbacks
         }
     }
 
-
+    //Dev note: Not bad, though I should improve on this in future. 
 
 }
 

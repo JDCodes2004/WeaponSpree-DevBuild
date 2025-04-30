@@ -11,7 +11,7 @@ public class RoomManager : MonoBehaviourPunCallbacks
 
     public GameObject playerPrefab;
     [Space]
-    public Transform spawnPoint;
+    public Transform[] spawnPoints;
     [Space]
     public GameObject roomCamera;
 
@@ -84,6 +84,8 @@ public class RoomManager : MonoBehaviourPunCallbacks
 
     public void SpawnPlayer()
     {
+        Transform spawnPoint = spawnPoints[UnityEngine.Random.Range(0, spawnPoints.Length)];
+
         GameObject _playerPrefab = PhotonNetwork.Instantiate(playerPrefab.name, spawnPoint.position, Quaternion.identity);
         _playerPrefab.GetComponent<PlayerSetup>().IsLocalPlayer();
         _playerPrefab.GetComponent<Health>().isLocalPlayer = true;

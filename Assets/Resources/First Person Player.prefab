@@ -840,7 +840,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &163688547699010846
 RectTransform:
   m_ObjectHideFlags: 0
@@ -877,7 +877,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2908203909953441827}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -2360,7 +2360,7 @@ MonoBehaviour:
   health: 100
   isLocalPlayer: 1
   healthText: {fileID: 8344583076202532161}
-  LowHealthWarning: {fileID: 2908203909953441827}
+  LowHealthWarning: {fileID: 6632303558901265584}
   LowHealth: {fileID: 3256493528580214230}
   CriticalHealth: {fileID: 7664534583347927667}
 --- !u!114 &469551937031094656

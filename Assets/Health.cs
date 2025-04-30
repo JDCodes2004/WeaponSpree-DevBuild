@@ -12,7 +12,7 @@ public bool isLocalPlayer;
 
     [Header("UI")]
     public TextMeshProUGUI healthText;
-    public GameObject LowHealthWarning;
+    public Image LowHealthWarning;
     public AudioSource LowHealth;
     public AudioSource CriticalHealth;
 
@@ -27,18 +27,20 @@ public bool isLocalPlayer;
 
         if (health <= 50)
         {
-            LowHealthWarning.SetActive(true);
+            LowHealthWarning.enabled = true;
             LowHealth.Play();
+            CriticalHealth.Stop();
         }
 
         if (health <= 25)
         {
-            LowHealthWarning.SetActive (true);
+            LowHealthWarning.enabled = true;
             CriticalHealth.Play();
+            LowHealth.Stop();
         }
         else
         {
-            LowHealthWarning.SetActive (false);
+            LowHealthWarning.enabled = false;
         }
 
         //Player Death
