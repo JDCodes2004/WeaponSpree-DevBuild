@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class MenuManager : MonoBehaviour
 {
+
+    [Header ("Game Objects")]
     public GameObject MenuGameObject;
     public GameObject SpecialThanksGameObject;
     public GameObject MultiplayerMenuGameObject;
     public GameObject TitleCamera;
     public GameObject TestLevelSelectMenuGameObject;
     public GameObject WelcomeMessageGameObject;
+    public GameObject OptionsMenuGameObject;
+    public GameObject LoadingScreenGameObject;
+    
+    [Header ("Audio Sources")]
     public AudioSource PlaceholderMenuConfirm;
     public AudioSource PlaceholderMenuBack;
-    public GameObject OptionsMenuGameObject;
+    
     // Option menu
     public void GoToOptionsMenu()
     {
@@ -67,15 +73,31 @@ public class MenuManager : MonoBehaviour
     {
         MenuGameObject.SetActive(false);
         MultiplayerMenuGameObject.SetActive(true);
-        SpecialThanksGameObject.SetActive(true);
+        SpecialThanksGameObject.SetActive(false);
         TitleCamera.SetActive(true);
         WelcomeMessageGameObject.SetActive(false);
         PlaceholderMenuBack.Play();
         OptionsMenuGameObject.SetActive(false);
         TestLevelSelectMenuGameObject.SetActive(false);
+
     }
 
+    // Quickplay
+    public void Quickplay()
+    {
+        MenuGameObject.SetActive(false);
+        MultiplayerMenuGameObject.SetActive(false);
+        SpecialThanksGameObject.SetActive(false);
+        TitleCamera.SetActive(true);
+        WelcomeMessageGameObject.SetActive(false);
+        PlaceholderMenuBack.Play();
+        OptionsMenuGameObject.SetActive(false);
+        TestLevelSelectMenuGameObject.SetActive(false);
+        LoadingScreenGameObject.SetActive(true);
 
+
+
+    }
     // Special Thanks screen
     public void GoToSpecThanks()
     {
