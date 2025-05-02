@@ -14,6 +14,9 @@ public class MenuManager : MonoBehaviour
     public GameObject WelcomeMessageGameObject;
     public GameObject OptionsMenuGameObject;
     public GameObject LoadingScreenGameObject;
+    public GameObject ThanksforPlayingScreenGameObject;
+    public GameObject SurveyButtonGameObject;
+    public GameObject DevelopmentNewsGameObject;
     
     [Header ("Audio Sources")]
     public AudioSource PlaceholderMenuConfirm;
@@ -28,6 +31,9 @@ public class MenuManager : MonoBehaviour
         WelcomeMessageGameObject.SetActive(false);
         PlaceholderMenuConfirm.Play();
         OptionsMenuGameObject.SetActive(true);
+        SurveyButtonGameObject.SetActive(false);
+        ThanksforPlayingScreenGameObject.SetActive(false);
+        DevelopmentNewsGameObject.SetActive(false);
     }
 
     //Back to Main Menu
@@ -40,6 +46,9 @@ public class MenuManager : MonoBehaviour
         PlaceholderMenuBack.Play();
         OptionsMenuGameObject.SetActive(false);
         TestLevelSelectMenuGameObject.SetActive(false);
+        SurveyButtonGameObject.SetActive(false);
+        ThanksforPlayingScreenGameObject.SetActive(false);
+        DevelopmentNewsGameObject.SetActive(false);
     }
 
     // Test Level select screen
@@ -52,6 +61,9 @@ public class MenuManager : MonoBehaviour
         PlaceholderMenuBack.Play();
         OptionsMenuGameObject.SetActive(false);
         TestLevelSelectMenuGameObject.SetActive(true);
+        SurveyButtonGameObject.SetActive(false);
+        ThanksforPlayingScreenGameObject.SetActive(false);
+        DevelopmentNewsGameObject.SetActive(false);
     }
 
 
@@ -66,6 +78,9 @@ public class MenuManager : MonoBehaviour
         PlaceholderMenuBack.Play();
         OptionsMenuGameObject.SetActive(false);
         TestLevelSelectMenuGameObject.SetActive(false);
+        SurveyButtonGameObject.SetActive(false);
+        DevelopmentNewsGameObject.SetActive(false);
+        ThanksforPlayingScreenGameObject.SetActive(false);
     }
 
     // Multiplayer
@@ -79,6 +94,9 @@ public class MenuManager : MonoBehaviour
         PlaceholderMenuBack.Play();
         OptionsMenuGameObject.SetActive(false);
         TestLevelSelectMenuGameObject.SetActive(false);
+        DevelopmentNewsGameObject.SetActive(false);
+        SurveyButtonGameObject.SetActive(false);
+        ThanksforPlayingScreenGameObject.SetActive(false);
 
     }
 
@@ -94,8 +112,9 @@ public class MenuManager : MonoBehaviour
         OptionsMenuGameObject.SetActive(false);
         TestLevelSelectMenuGameObject.SetActive(false);
         LoadingScreenGameObject.SetActive(true);
-
-
+        DevelopmentNewsGameObject.SetActive(false);
+        SurveyButtonGameObject.SetActive(false);
+        ThanksforPlayingScreenGameObject.SetActive(false);
 
     }
     // Special Thanks screen
@@ -108,18 +127,34 @@ public class MenuManager : MonoBehaviour
         PlaceholderMenuBack.Play();
         OptionsMenuGameObject.SetActive(false);
         TestLevelSelectMenuGameObject.SetActive(false);
+        SurveyButtonGameObject.SetActive(false);
+        ThanksforPlayingScreenGameObject.SetActive(false);
+        DevelopmentNewsGameObject.SetActive(false);
     }
 
-    // Quit Game
-    public void QuitToDesktop()
+    // Thanks for Playing screen
+    public void ThanksForPlaying()
     {
-        Debug.Log("Quitting to Desktop...");
-        Application.Quit();
+        MenuGameObject.SetActive(false);
+        SpecialThanksGameObject.SetActive(false);
+        TitleCamera.SetActive(true);
+        WelcomeMessageGameObject.SetActive(false);
+        OptionsMenuGameObject.SetActive(false);
+        SurveyButtonGameObject.SetActive(true);
+        ThanksforPlayingScreenGameObject.SetActive(true);
+        DevelopmentNewsGameObject.SetActive(true);
     }
 
     // Developer Commentary level Load
-    public void LoadDevCommentaryLevel()
+    public void OpenSurveyLink()
     {
+        Application.OpenURL("https://forms.gle/yPvmSmYHa8ehXhLS6");
+        Application.Quit();
+    }
 
+    public void KeepUpToDateLink()
+    {
+        Application.OpenURL("https://jdgames2004.itch.io/fps-project-im-working-on");
+        Application.Quit();
     }
 }

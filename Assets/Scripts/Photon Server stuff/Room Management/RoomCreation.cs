@@ -16,5 +16,9 @@ public class RoomCreation : MonoBehaviourPunCallbacks
     public Button CreateRoomonMapFour;
     public GameObject MapErrorPanel;
 
+    public void Update()
+    {
+        
+    }
 }
 
