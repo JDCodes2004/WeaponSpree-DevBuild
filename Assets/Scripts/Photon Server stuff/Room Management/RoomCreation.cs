@@ -10,17 +10,11 @@ using Unity.VisualScripting;
 
 public class RoomCreation : MonoBehaviourPunCallbacks
 {
-    public TextMeshProUGUI OptionsOutput;
-    public Button CreateRoom;
-    public TMP_Dropdown RoomLevelChoice;
-
-
-    private int value;
-
-    void HandleInputData(int value)
-    {
-
-    }
+    public Button CreateRoomonMapOne;
+    public Button CreateRoomonMapTwo;
+    public Button CreateRoomonMapThree;
+    public Button CreateRoomonMapFour;
+    public GameObject MapErrorPanel;
 
 }
 
