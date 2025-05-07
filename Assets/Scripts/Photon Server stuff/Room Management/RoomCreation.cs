@@ -17,10 +17,11 @@ public class RoomCreation : MonoBehaviourPunCallbacks
     public GameObject MapErrorPanel;
     public static RoomManager instance;
 
-    public void MapOneCreation()
+    public void MapOneCreation(PhotonNetwork photonNetwork)
     {
-        PhotonNetwork.LoadLevel(SceneManager.GetActiveScene().buildIndex + 1);
-        PhotonNetwork.CreateRoom("", null, null, null);
+        PhotonNetwork.JoinOrCreateRoom;
+        Photon.Pun.PhotonNetwork.LoadLevel(SceneManager.GetActiveScene().buildIndex + 1);
+        Photon.Pun.PhotonNetwork.CreateRoom("", null, null, null);
 
     }
     public void MapTwoCreation() 
