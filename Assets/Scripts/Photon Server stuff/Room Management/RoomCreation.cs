@@ -15,10 +15,25 @@ public class RoomCreation : MonoBehaviourPunCallbacks
     public Button CreateRoomonMapThree;
     public Button CreateRoomonMapFour;
     public GameObject MapErrorPanel;
+    public static RoomManager instance;
 
-    public void Update()
+    public void MapOneCreation()
     {
-        
+        PhotonNetwork.LoadLevel(SceneManager.GetActiveScene().buildIndex + 1);
+        PhotonNetwork.CreateRoom("", null, null, null);
+
     }
+    public void MapTwoCreation() 
+    {
+        PhotonNetwork.LoadLevel(SceneManager.GetActiveScene().buildIndex + 2);
+        PhotonNetwork.CreateRoom("", null, null, null);
+    }
+    public void MapThreeCreation() 
+    {
+        PhotonNetwork.LoadLevel(SceneManager.GetActiveScene().buildIndex + 3);
+        PhotonNetwork.CreateRoom("", null, null, null);
+    }
+
+
 }
 
