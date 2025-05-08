@@ -46,7 +46,7 @@ public bool isLocalPlayer;
         //Player Death
         if (health <= 0)
         {
-            Destroy(gameObject);
+            PhotonNetwork.Destroy(gameObject);
             if (isLocalPlayer)
             {
                 RoomManager.instance.SpawnPlayer();

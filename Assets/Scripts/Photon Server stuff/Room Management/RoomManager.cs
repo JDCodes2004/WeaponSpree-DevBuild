@@ -26,9 +26,9 @@ public class RoomManager : MonoBehaviourPunCallbacks
     public string nickname = "unnamed player";
 
 
-    public string roomNameToJoin = "test";
+    public string roomNameToJoin = "Test-Server";
 
-    private void Awake()
+    public void Awake()
     {
         instance = this;
     }

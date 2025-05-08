@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 using TMPro;
 using Unity.VisualScripting;
+using UnityEditor.XR;
 
 public class RoomCreation : MonoBehaviourPunCallbacks
 {
@@ -14,25 +15,31 @@ public class RoomCreation : MonoBehaviourPunCallbacks
     public Button CreateRoomonMapTwo;
     public Button CreateRoomonMapThree;
     public Button CreateRoomonMapFour;
-    public GameObject MapErrorPanel;
+    public GameObject RoomCreationMenu;
     public static RoomManager instance;
+    public GameObject LoadingScreen;
 
-    public void MapOneCreation(PhotonNetwork photonNetwork)
+    public void MapOneCreation()
     {
-        PhotonNetwork.JoinOrCreateRoom;
         Photon.Pun.PhotonNetwork.LoadLevel(SceneManager.GetActiveScene().buildIndex + 1);
         Photon.Pun.PhotonNetwork.CreateRoom("", null, null, null);
+        LoadingScreen.SetActive(true);
+        RoomCreationMenu.SetActive(false);
 
     }
     public void MapTwoCreation() 
     {
         PhotonNetwork.LoadLevel(SceneManager.GetActiveScene().buildIndex + 2);
         PhotonNetwork.CreateRoom("", null, null, null);
+        LoadingScreen.SetActive(true);
+        RoomCreationMenu.SetActive(false);
     }
     public void MapThreeCreation() 
     {
         PhotonNetwork.LoadLevel(SceneManager.GetActiveScene().buildIndex + 3);
         PhotonNetwork.CreateRoom("", null, null, null);
+        LoadingScreen.SetActive(true);
+        RoomCreationMenu.SetActive(false);
     }
 
 

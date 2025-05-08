@@ -4810,7 +4810,7 @@ PrefabInstance:
     - target: {fileID: 1448878592658033735, guid: ab0b9f448ee1c5747bca0c029bb26ffb,
         type: 3}
       propertyPath: roomNameToJoin
-      value: 
+      value: Test-Server
       objectReference: {fileID: 0}
     - target: {fileID: 1448878592658033735, guid: ab0b9f448ee1c5747bca0c029bb26ffb,
         type: 3}
