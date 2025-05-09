@@ -33,13 +33,13 @@ public class PlayerSetup : MonoBehaviour
     [PunRPC]
     public void PauseMenu()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Return))
         {
             GamePaused = true;
         }
         else
         {
-            GamePaused &= false;
+            GamePaused = false;
         }
 
         if (GamePaused == true)

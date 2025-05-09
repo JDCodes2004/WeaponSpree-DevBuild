@@ -4,7 +4,7 @@ using UnityEngine;
 namespace InfimaGames.LowPolyShooterPack.Interface
 {
     /// <summary>
-    /// Interface component that hides or shows the tutorial text based on input.
+    /// Interface component that hides or shows the Leaderboard text based on input.
     /// </summary>
     public class TextTutorial : ElementText
     {
@@ -12,11 +12,11 @@ namespace InfimaGames.LowPolyShooterPack.Interface
         
         [Header("References")]
         
-        [Tooltip("Tutorial prompt text.")]
+        [Tooltip("Leaderboard prompt text.")]
         [SerializeField]
         private TextMeshProUGUI prompt;
 
-        [Tooltip("Tutorial text.")]
+        [Tooltip("Leaderboard text.")]
         [SerializeField]
         private TextMeshProUGUI tutorial;
 

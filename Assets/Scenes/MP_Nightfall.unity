@@ -2316,7 +2316,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &946239809
 Transform:
   m_ObjectHideFlags: 0
@@ -4557,12 +4557,12 @@ GameObject:
   - component: {fileID: 2103550966}
   - component: {fileID: 2103550967}
   m_Layer: 0
-  m_Name: EasterEggMusicCue
+  m_Name: EasterEggMusicCue TEMP PH
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2103550966
 Transform:
   m_ObjectHideFlags: 0
