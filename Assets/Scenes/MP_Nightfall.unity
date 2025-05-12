@@ -2340,7 +2340,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 946239808}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0b9503b68f10fdb46b7cb44fa9464a5a, type: 3}
   m_Name: 
@@ -3858,7 +3858,7 @@ Transform:
   m_GameObject: {fileID: 1754539513}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2008, y: 604.01, z: -1699.6}
+  m_LocalPosition: {x: 2008, y: 599.88, z: -1699.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4562,7 +4562,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2103550966
 Transform:
   m_ObjectHideFlags: 0
@@ -4786,6 +4786,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1250336168239801867, guid: ab0b9f448ee1c5747bca0c029bb26ffb,
+        type: 3}
+      propertyPath: m_fontStyle
+      value: 32
+      objectReference: {fileID: 0}
     - target: {fileID: 1448878592658033735, guid: ab0b9f448ee1c5747bca0c029bb26ffb,
         type: 3}
       propertyPath: nameUI
@@ -4827,6 +4832,46 @@ PrefabInstance:
       propertyPath: m_Name
       value: RoomManager
       objectReference: {fileID: 0}
+    - target: {fileID: 2985829135261731673, guid: ab0b9f448ee1c5747bca0c029bb26ffb,
+        type: 3}
+      propertyPath: m_fontStyle
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 2985829135261731673, guid: ab0b9f448ee1c5747bca0c029bb26ffb,
+        type: 3}
+      propertyPath: m_fontColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2985829135261731673, guid: ab0b9f448ee1c5747bca0c029bb26ffb,
+        type: 3}
+      propertyPath: m_fontColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2985829135261731673, guid: ab0b9f448ee1c5747bca0c029bb26ffb,
+        type: 3}
+      propertyPath: m_fontColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2985829135261731673, guid: ab0b9f448ee1c5747bca0c029bb26ffb,
+        type: 3}
+      propertyPath: m_fontColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2985829135261731673, guid: ab0b9f448ee1c5747bca0c029bb26ffb,
+        type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278190080
+      objectReference: {fileID: 0}
+    - target: {fileID: 3266642055728398801, guid: ab0b9f448ee1c5747bca0c029bb26ffb,
+        type: 3}
+      propertyPath: m_fontStyle
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 5728358899980484052, guid: ab0b9f448ee1c5747bca0c029bb26ffb,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6167127645508092092, guid: ab0b9f448ee1c5747bca0c029bb26ffb,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -4856,6 +4901,51 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6597455632236896367, guid: ab0b9f448ee1c5747bca0c029bb26ffb,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 27.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6597455632236896367, guid: ab0b9f448ee1c5747bca0c029bb26ffb,
+        type: 3}
+      propertyPath: m_fontStyle
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 7231403177061618227, guid: ab0b9f448ee1c5747bca0c029bb26ffb,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 148040400}
+    - target: {fileID: 7231403177061618227, guid: ab0b9f448ee1c5747bca0c029bb26ffb,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: JoinRoomButtonPressed
+      objectReference: {fileID: 0}
+    - target: {fileID: 7352366596314485957, guid: ab0b9f448ee1c5747bca0c029bb26ffb,
+        type: 3}
+      propertyPath: m_fontStyle
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 7352366596314485957, guid: ab0b9f448ee1c5747bca0c029bb26ffb,
+        type: 3}
+      propertyPath: m_fontColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7352366596314485957, guid: ab0b9f448ee1c5747bca0c029bb26ffb,
+        type: 3}
+      propertyPath: m_fontColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7352366596314485957, guid: ab0b9f448ee1c5747bca0c029bb26ffb,
+        type: 3}
+      propertyPath: m_fontColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7352366596314485957, guid: ab0b9f448ee1c5747bca0c029bb26ffb,
+        type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278190080
       objectReference: {fileID: 0}
     - target: {fileID: 8343363626563274372, guid: ab0b9f448ee1c5747bca0c029bb26ffb,
         type: 3}

@@ -14,7 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MP_Snowfall.unity
     guid: 33b9643bafa66264eb639282b31c7439
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MP_Arena.unity
     guid: b7871cb9f83c60d4ba761f6004a59bca
   m_configObjects:

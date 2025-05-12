@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 using Unity.VisualScripting;
+using Photon.Pun.UtilityScripts;
 
 public class WeaponController_AR : MonoBehaviour
 {
@@ -46,7 +47,12 @@ public class WeaponController_AR : MonoBehaviour
 
             if (hit.transform.gameObject.GetComponent<Health>())
             {
-                hit.transform.gameObject.GetComponent<PhotonView>().RPC("TakeDamage", RpcTarget.All, damage);
+                if (damage >= hit.transform.gameObject.GetComponent<Health>().health)
+                {
+                    // Kill/Elim
+                    PhotonNetwork.LocalPlayer.GetScore(100);
+                }
+                    hit.transform.gameObject.GetComponent<PhotonView>().RPC("TakeDamage", RpcTarget.All, damage);
                 PhotonNetwork.Destroy(targetGo: hitVFX);
             }
         }

@@ -48,7 +48,7 @@ namespace Photon.Pun.UtilityScripts
             player.SetCustomProperties(score);  // this locally sets the score and will sync it in-game asap.
         }
 
-        public static int GetScore(this Player player)
+        public static int GetScore(this Player player, int v)
         {
             object score;
             if (player.CustomProperties.TryGetValue(PunPlayerScores.PlayerScoreProp, out score))

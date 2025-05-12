@@ -1912,7 +1912,7 @@ GameObject:
   - component: {fileID: 6412172257387882526}
   - component: {fileID: 7344962955332465984}
   m_Layer: 10
-  m_Name: Score
+  m_Name: Score.Player.3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3731,7 +3731,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5693349753599696380
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3900,7 +3900,7 @@ GameObject:
   - component: {fileID: 6173623036137754245}
   - component: {fileID: 5105155572305287245}
   m_Layer: 10
-  m_Name: Score
+  m_Name: Score.Player.1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4271,6 +4271,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 493b077f5a599154382359880c86abde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playersHolder: {fileID: 5843571204589575885}
+  refreshRate: 1
+  slots:
+  - {fileID: 2191211549334527624}
+  - {fileID: 715948641308449223}
+  - {fileID: 8306495295260784326}
+  - {fileID: 511914642549090753}
+  scoreTexts:
+  - {fileID: 7150128395802208120}
+  - {fileID: 5105155572305287245}
+  - {fileID: 7939352587809565523}
+  - {fileID: 7344962955332465984}
+  nameTexts:
+  - {fileID: 3909599313567157186}
+  - {fileID: 4641015980112152795}
+  - {fileID: 556529615067791224}
+  - {fileID: 4255982118692708463}
 --- !u!1 &6481883232628808540
 GameObject:
   m_ObjectHideFlags: 0
@@ -4283,7 +4300,7 @@ GameObject:
   - component: {fileID: 6365697163078116346}
   - component: {fileID: 7150128395802208120}
   m_Layer: 10
-  m_Name: Score
+  m_Name: Score.Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5109,7 +5126,7 @@ GameObject:
   - component: {fileID: 4029610266712717107}
   - component: {fileID: 7939352587809565523}
   m_Layer: 10
-  m_Name: Score
+  m_Name: Score.Player.2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
