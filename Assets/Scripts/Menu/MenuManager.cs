@@ -1,3 +1,4 @@
+using Photon.Pun;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -128,6 +129,7 @@ public class MenuManager : MonoBehaviour
         ThanksforPlayingScreenGameObject.SetActive(false);
         DiscordServerGameObject.SetActive(false);
         MOTDMessageGameObject.SetActive(false);
+        PhotonNetwork.JoinRandomOrCreateRoom();
 
     }
     // Special Thanks screen
