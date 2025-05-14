@@ -454,5 +454,10 @@ namespace Photon.Realtime
 
             return false;
         }
+
+        public int GetScore()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

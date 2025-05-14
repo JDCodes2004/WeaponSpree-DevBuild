@@ -17,6 +17,8 @@ public class MenuManager : MonoBehaviour
     public GameObject ThanksforPlayingScreenGameObject;
     public GameObject SurveyButtonGameObject;
     public GameObject DevelopmentNewsGameObject;
+    public GameObject DiscordServerGameObject;
+    public GameObject MOTDMessageGameObject;
     
     [Header ("Audio Sources")]
     public AudioSource PlaceholderMenuConfirm;
@@ -34,6 +36,8 @@ public class MenuManager : MonoBehaviour
         SurveyButtonGameObject.SetActive(false);
         ThanksforPlayingScreenGameObject.SetActive(false);
         DevelopmentNewsGameObject.SetActive(false);
+        DiscordServerGameObject.SetActive(false);
+        MOTDMessageGameObject.SetActive(false);
     }
 
     //Back to Main Menu
@@ -49,6 +53,8 @@ public class MenuManager : MonoBehaviour
         SurveyButtonGameObject.SetActive(false);
         ThanksforPlayingScreenGameObject.SetActive(false);
         DevelopmentNewsGameObject.SetActive(false);
+        DiscordServerGameObject.SetActive(true);
+        MOTDMessageGameObject.SetActive(true);
     }
 
     // Test Level select screen
@@ -64,6 +70,8 @@ public class MenuManager : MonoBehaviour
         SurveyButtonGameObject.SetActive(false);
         ThanksforPlayingScreenGameObject.SetActive(false);
         DevelopmentNewsGameObject.SetActive(false);
+        DiscordServerGameObject.SetActive(false);
+        MOTDMessageGameObject.SetActive(false);
     }
 
 
@@ -81,6 +89,8 @@ public class MenuManager : MonoBehaviour
         SurveyButtonGameObject.SetActive(false);
         DevelopmentNewsGameObject.SetActive(false);
         ThanksforPlayingScreenGameObject.SetActive(false);
+        DiscordServerGameObject.SetActive(false);
+        MOTDMessageGameObject.SetActive(false);
     }
 
     // Multiplayer
@@ -97,7 +107,8 @@ public class MenuManager : MonoBehaviour
         DevelopmentNewsGameObject.SetActive(false);
         SurveyButtonGameObject.SetActive(false);
         ThanksforPlayingScreenGameObject.SetActive(false);
-
+        DiscordServerGameObject.SetActive(false);
+        MOTDMessageGameObject.SetActive(false);
     }
 
     // Quickplay
@@ -115,6 +126,8 @@ public class MenuManager : MonoBehaviour
         DevelopmentNewsGameObject.SetActive(false);
         SurveyButtonGameObject.SetActive(false);
         ThanksforPlayingScreenGameObject.SetActive(false);
+        DiscordServerGameObject.SetActive(false);
+        MOTDMessageGameObject.SetActive(false);
 
     }
     // Special Thanks screen
@@ -130,6 +143,8 @@ public class MenuManager : MonoBehaviour
         SurveyButtonGameObject.SetActive(false);
         ThanksforPlayingScreenGameObject.SetActive(false);
         DevelopmentNewsGameObject.SetActive(false);
+        DiscordServerGameObject.SetActive(false);
+        MOTDMessageGameObject.SetActive(false);
     }
 
     // Thanks for Playing screen
@@ -143,6 +158,8 @@ public class MenuManager : MonoBehaviour
         SurveyButtonGameObject.SetActive(true);
         ThanksforPlayingScreenGameObject.SetActive(true);
         DevelopmentNewsGameObject.SetActive(true);
+        DiscordServerGameObject.SetActive(false);
+        MOTDMessageGameObject.SetActive(false);
     }
 
     // Developer Commentary level Load
@@ -156,5 +173,10 @@ public class MenuManager : MonoBehaviour
     {
         Application.OpenURL("https://jdgames2004.itch.io/fps-project-im-working-on");
         Application.Quit();
+    }
+
+    public void OpenDiscordServerLink()
+    {
+        Application.OpenURL("https://discord.gg/aCjSumNQHR");
     }
 }
