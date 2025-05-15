@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MenuManager : MonoBehaviour
+public class MenuManager : MonoBehaviourPunCallbacks
 {
 
     [Header ("Game Objects")]
@@ -24,7 +24,12 @@ public class MenuManager : MonoBehaviour
     [Header ("Audio Sources")]
     public AudioSource PlaceholderMenuConfirm;
     public AudioSource PlaceholderMenuBack;
-    
+
+
+    public void Start()
+    {
+        PhotonNetwork.ConnectUsingSettings();
+    }
     // Option menu
     public void GoToOptionsMenu()
     {

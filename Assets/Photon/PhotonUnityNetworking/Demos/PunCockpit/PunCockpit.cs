@@ -461,7 +461,7 @@ namespace Photon.Pun.Demo.Cockpit
 			if (debug) Debug.Log("PunCockpit:Room options  <" + _roomOptions + ">");
 
             TypedLobby sqlLobby = new TypedLobby(lobbyName, lobbyType);
-            bool _result = PhotonNetwork.CreateRoom(roomName, _roomOptions, sqlLobby, expectedUsers);
+            bool _result = PhotonNetwork.JoinLobby(roomName, _roomOptions, sqlLobby, expectedUsers);
 
 			if (debug) Debug.Log("PunCockpit:CreateRoom() -> " + _result);
 

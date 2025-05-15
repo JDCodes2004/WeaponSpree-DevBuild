@@ -100,7 +100,7 @@ namespace Photon.Pun.Demo.Asteroids
 
             RoomOptions options = new RoomOptions {MaxPlayers = 8};
 
-            PhotonNetwork.CreateRoom(roomName, options, null);
+            PhotonNetwork.JoinLobby(roomName, options, null);
         }
 
         public override void OnJoinedRoom()
@@ -227,7 +227,7 @@ namespace Photon.Pun.Demo.Asteroids
 
             RoomOptions options = new RoomOptions {MaxPlayers = maxPlayers, PlayerTtl = 10000 };
 
-            PhotonNetwork.CreateRoom(roomName, options, null);
+            PhotonNetwork.JoinLobby(roomName, options, null);
         }
 
         public void OnJoinRandomRoomButtonClicked()

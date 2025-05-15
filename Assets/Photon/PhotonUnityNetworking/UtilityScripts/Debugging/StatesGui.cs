@@ -192,7 +192,7 @@ namespace Photon.Pun.UtilityScripts
                 }
                 if (PhotonNetwork.IsConnected && !PhotonNetwork.InRoom && GUILayout.Button("Create Room"))
                 {
-                    PhotonNetwork.CreateRoom(null);
+                    PhotonNetwork.JoinLobby((string)null);
                 }
             }
 

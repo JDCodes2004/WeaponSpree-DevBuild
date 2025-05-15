@@ -82,7 +82,7 @@ namespace Photon.Pun.UtilityScripts
             if (playerTTL >= 0)
                 roomOptions.PlayerTtl = playerTTL;
 
-            PhotonNetwork.CreateRoom(null, roomOptions, null);
+            PhotonNetwork.JoinLobby(null, roomOptions, null);
         }
 
         // the following methods are implemented to give you some context. re-implement them as needed.

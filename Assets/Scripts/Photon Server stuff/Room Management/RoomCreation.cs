@@ -21,7 +21,7 @@ public class RoomCreation : MonoBehaviourPunCallbacks
     public void MapOneCreation()
     {
         Photon.Pun.PhotonNetwork.LoadLevel(SceneManager.GetActiveScene().buildIndex + 1);
-        Photon.Pun.PhotonNetwork.CreateRoom("", null, null, null);
+        Photon.Pun.PhotonNetwork.JoinLobby("", null, null, null);
         LoadingScreen.SetActive(true);
         RoomCreationMenu.SetActive(false);
 
@@ -29,14 +29,14 @@ public class RoomCreation : MonoBehaviourPunCallbacks
     public void MapTwoCreation() 
     {
         PhotonNetwork.LoadLevel(SceneManager.GetActiveScene().buildIndex + 2);
-        PhotonNetwork.CreateRoom("", null, null, null);
+        PhotonNetwork.JoinLobby("", null, null, null);
         LoadingScreen.SetActive(true);
         RoomCreationMenu.SetActive(false);
     }
     public void MapThreeCreation() 
     {
         PhotonNetwork.LoadLevel(SceneManager.GetActiveScene().buildIndex + 3);
-        PhotonNetwork.CreateRoom("", null, null, null);
+        PhotonNetwork.JoinLobby("", null, null, null);
         LoadingScreen.SetActive(true);
         RoomCreationMenu.SetActive(false);
     }
