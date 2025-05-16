@@ -80,6 +80,7 @@ public class RoomManager : MonoBehaviourPunCallbacks
         Debug.Log("Joined Room");
         roomCamera.SetActive(false);
         SpawnPlayer();
+
     }
 
     public void SpawnPlayer()

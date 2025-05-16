@@ -6,7 +6,7 @@ using Photon.Pun;
 using Photon.Pun.UtilityScripts;
 using TMPro;
 
-public class Leaderboard : MonoBehaviour
+public class Leaderboard : MonoBehaviourPunCallbacks
 {
     public GameObject playersHolder;
 
