@@ -18,6 +18,15 @@ public class RoomCreation : MonoBehaviourPunCallbacks
     public static RoomManager instance;
     public GameObject LoadingScreen;
 
+    void Start()
+    {
+
+        if (!PhotonNetwork.IsConnected)
+        {
+            print("Connecting to server..");
+            PhotonNetwork.ConnectUsingSettings();
+        }
+    }
     public void MapOneCreation()
     {
         Photon.Pun.PhotonNetwork.LoadLevel(SceneManager.GetActiveScene().buildIndex + 1);

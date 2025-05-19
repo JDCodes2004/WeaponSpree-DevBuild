@@ -44,7 +44,11 @@ public class RoomList : MonoBehaviourPunCallbacks
 
         yield return new WaitUntil(() => !PhotonNetwork.IsConnected);
 
-        PhotonNetwork.ConnectUsingSettings();
+            if (!PhotonNetwork.IsConnected)
+            {
+                print("Connecting to server..");
+                PhotonNetwork.ConnectUsingSettings();
+            }
     }
 
     public override void OnConnectedToMaster()

@@ -53,4 +53,16 @@ public class PlayerSetup : MonoBehaviour
             GamePaused = false;
         }
     }
+
+    [PunRPC]
+    public void QuitGame()
+    {
+        PhotonNetwork.LoadLevel(0);
+    }
+
+    [PunRPC]
+    public void QuitToDesktop()
+    {
+        Application.Quit();
+    }
 }

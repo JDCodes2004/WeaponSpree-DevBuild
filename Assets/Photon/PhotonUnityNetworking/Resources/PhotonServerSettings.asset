@@ -42,6 +42,8 @@ MonoBehaviour:
   - TakeDamage
   - SetNickname
   - PauseMenu
+  - QuitGame
+  - QuitToDesktop
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1
